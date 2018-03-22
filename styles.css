@@ -1,0 +1,193 @@
+element {
+  --bg-color: #5ed1c1;
+  --fg-color: #3b7432;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eee;
+  color:#3d3d3d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Genericons';
+  src: url('./genericons/genericons-regular-webfont.woff') format('woff'),
+    url('./genericons/genericons-regular-webfont.eot') format('truetype')
+}
+
+.conainer {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.slider {
+  list-style: none;
+  background-color: #5ed1c1;
+  margin: 50px auto;
+  min-width: 800px;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.button {
+  display: inline-block;
+  background-color: #5ed1c1;
+  border-right: #333 solid 1px;
+  width:80px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  transition: all 0.5s ease-in-out 0.1s;
+}
+
+.button:hover {
+  width: 450px;
+  background: #eee;
+}
+
+.button:hover .cover a:before{
+  margin-left: -100px;
+}
+
+.button:hover .cover a:after{
+  margin-left: -5px;
+}
+
+/* Tab Panel */
+/* .button .cover {
+
+  width: 80px;
+  font-size: 1.2rem;
+  height: 200px;
+  position: absolute;
+} */
+
+/* Tab Detail */
+.button .detail {
+  position: relative;
+  background: #eee;
+  width: 360px;
+  height: 200px;
+  font-size: 1rem;
+  margin-left: 80px;
+  padding: 50px 0 0 15px;
+  /* margin-bottom: 10px; */
+}
+
+.button .detail h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.button .detail p {
+  line-height: 1.4rem;
+  padding-right: 30px;
+}
+
+.cover a:before,
+.cover a:after {
+  transition: all 0.4s ease-in-out 0.1s;
+  width: 80px;
+  height: 200px;
+  position: absolute;
+  text-indent: 0;
+  padding-top: 90px;
+  padding-left: 25px;
+  display: block;
+  font: normal 30px Genericons;
+  color: #fff;
+}
+
+.cover a:after {
+  font-size: 48px;
+  padding-top: 80px;
+  padding-left: 20px;
+  margin-left: 85px;
+}
+
+/* Github */
+.github a:before,
+.github a:after {
+  content: '\f200'
+}
+.github a:after {
+  background: #6ee2d3;
+}
+
+/* linked-in */
+.linked-in a:before,
+.linked-in a:after {
+  content: '\f208'
+}
+.linked-in a:after {
+  background: #6e5494;
+}
+/* gplus */
+.gplus a:before,
+.gplus a:after {
+  content: '\f206'
+}
+.gplus a:after {
+  background: #d84735;
+}
+/* twitter */
+.twitter a:before,
+.twitter a:after {
+  content: '\f202'
+}
+.twitter a:after {
+  background: #6dc5dd;
+}
+/* instructables */
+.instr a:before,
+.instr a:after {
+  content: '\f107'
+}
+.instr a:after {
+  background: #fbc116;
+}
+@media(max-width: 950px){
+  .container {
+    width: 70%;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+    border-bottom: 3px #333 solid;
+  }
+
+  .slider {
+    display: block;
+    min-width: 450px;
+    height: auto;
+  }
+
+  .button .detail {
+    width: 85%;
+  }
+
+  .detail:hover {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: 95%;
+  }
+
+  .slider {
+    width: 100%;
+    min-width: 350px;
+  }
+}
